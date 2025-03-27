@@ -1,0 +1,23 @@
+meta {
+  name: TestCreateUser
+  type: http
+  seq: 2
+}
+
+get {
+  url: http://localhost/servicio_suscripcion/wp-json/conexion-sites/v1/crear_usuario
+  body: json
+  auth: inherit
+}
+
+headers {
+  Authorization: tu_token_secreto
+}
+
+body:json {
+  {
+    "username": "nusevso_usuario",
+    "email": "corresos@example.com",
+    "password": "ConstrasseñaSegura123"
+  }
+}
